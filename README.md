@@ -1,3 +1,6 @@
-to simulate run:
+to simulate error run:
 
-1.  npx openapi-typescript-codegen --input spec.yaml --output ./generated --exportServices=false --exportCore=false
+1.  npm install
+2.  npm run build
+
+you will get generated/models/CardPaymentMethod.ts:6:13 - error TS2456: Type alias 'CardPaymentMethod' circularly references itself.

@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: Payment Endpoints API Documentation
+  description: Endpoints provided by payment team
+  version: '1.0'
+  license:
+    name: MIT
+components:
+  schemas:
+    CardPaymentMethod:
+      type: object
+      allOf:
+        - $ref: '#/components/schemas/PaymentMethod'
+      properties:
+        name:
+          type: 'string'
+          description: "Cardholder name."
+          example: "John Doe"
+    PaymentMethod:
+      required:
+        - type
+      type: object
+      oneOf:
+        - $ref: '#/components/schemas/CardPaymentMethod'
+      properties:
+        type:
+          type: string
+      discriminator:
+        propertyName: type
+        mapping:
+          CardPaymentMethod: '#/components/schemas/CardPaymentMethod'

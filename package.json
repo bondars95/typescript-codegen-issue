@@ -1,0 +1,15 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "generated/index.ts",
+  "scripts": {
+    "build": "npx openapi-typescript-codegen --input spec.yaml --output ./generated --exportServices=false --exportCore=false && tsc generated/index.ts"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.2",
+    "openapi-typescript-codegen": "0.26.0"
+  }
+}

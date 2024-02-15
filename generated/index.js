@@ -1,0 +1,6 @@
+"use strict";
+/* generated using openapi-typescript-codegen -- do no edit */
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+exports.__esModule = true;
